@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/pgbackup/__init__.py
+src/pgbackup.egg-info/PKG-INFO
+src/pgbackup.egg-info/SOURCES.txt
+src/pgbackup.egg-info/dependency_links.txt
+src/pgbackup.egg-info/top_level.txt
