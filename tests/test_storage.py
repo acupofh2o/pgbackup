@@ -1,5 +1,5 @@
 import tempfile
-
+import pytest
 from pgbackup import storage
 
 @pytest.fixture
@@ -9,7 +9,7 @@ def infile():
     infile.seek(0)
     return infile
 
-def test_storage_file_locally():
+def test_storage_file_locally(infile):
     """
     Writes content to from a temp file to another
     """

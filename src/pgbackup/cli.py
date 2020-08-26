@@ -21,9 +21,10 @@ def create_parser():
 def main():
     import boto3
     from pgbackup import pgdump, storage
+    import time
 
     args = create_parser().parse_args()
-    dump = pgdump.dump(args.url)i
+    dump = pgdump.dump(args.url)
     if args.driver == 's3':
         client = boto3.client('s3')
         timestamp = time.strftime("%Y-%m-%dT%H:%M", local.localtime())

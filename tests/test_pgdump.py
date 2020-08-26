@@ -21,15 +21,15 @@ def test_dump_handles_oserror(mocker):
     with pytest.raises(SystemExit):
         pgdump.dump(url)
 
-def test_dump_file_name_without_timestamp():
+def test_dump_with_filename_without_timestamp():
     """
     pgdump.db_file_name returns the name of the database
     """
-    assert pgdump.dump_file_name(url) == "db_one.sql"
+    assert pgdump.dump_with_filename(url) == "db_one.sql"
 
-def test_dump_file_name_with_timestamp():
+def test_dump_with_filename_with_timestamp():
     """
-    pgdump.dump_file_name returns the name of the database
+    pgdump.dump_with_filename returns the name of the database
     """
     timestamp = "2020-08-25T11:40:00"
-    assert pgdump.dump_file_name(url, timestamp) == "db_one-2020-08-25T11:40:00.sql"
+    assert pgdump.dump_with_filename(url, timestamp) == "db_one-2020-08-25T11:40:00.sql"
